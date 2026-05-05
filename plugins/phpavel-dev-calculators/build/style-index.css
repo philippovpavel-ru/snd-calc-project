@@ -1,0 +1,329 @@
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/admin/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+.phpavel-dev-calculators-list-page .wp-heading-inline {
+  margin-right: 12px;
+}
+
+.phpavel-dev-calculators-list-page .page-title-action {
+  margin-left: 0;
+}
+
+.phpavel-dev-calculators-list-page__dataviews {
+  margin-top: 12px;
+}
+
+.phpavel-dev-calculators-list-page .column-title {
+  width: 60%;
+}
+
+.phpavel-dev-calculators-list-page .column-total {
+  width: 20%;
+}
+
+.phpavel-dev-calculators-list-page .column-status {
+  width: 20%;
+}
+
+.phpavel-dev-calculators-list-page .column-note {
+  width: 35%;
+}
+
+.phpavel-dev-calculators-list-page .has-row-actions .row-actions {
+  visibility: hidden;
+}
+
+.phpavel-dev-calculators-list-page tr:hover .has-row-actions .row-actions,
+.phpavel-dev-calculators-list-page tr:focus-within .has-row-actions .row-actions {
+  visibility: visible;
+}
+
+.phpavel-dev-calculators-list-page .has-row-actions strong a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.phpavel-dev-calculators-inline-properties {
+  background: #f6f7f7;
+  padding: 16px;
+  border: 1px solid #dcdcde;
+  margin: 12px 0 10px;
+}
+
+.phpavel-dev-calculators-inline-properties__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.phpavel-dev-calculators-list-page__note-preview {
+  white-space: pre-line;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #50575e;
+}
+
+/*
+ * DataViews row actions use @wordpress/components Menu. MenuMotionRoot keeps
+ * opacity:0 until the inner surface gets data-enter; in some admin setups the
+ * enter transition never applies data-enter, so the popover stays invisible.
+ * Force the motion wrapper visible when the menu surface is open (scoped to
+ * this plugin's admin screens).
+ */
+
+body.toplevel_page_phpavel-dev-calculators *:has(> [role=menu][data-open]),
+body.admin_page_phpavel-dev-calculators-edit *:has(> [role=menu][data-open]) {
+  opacity: 1 !important;
+  transform: none !important;
+  will-change: auto !important;
+}
+
+.phpavel-dev-calculators-edit-page__topbar {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.phpavel-dev-calculators-edit-page__topbar h1.wp-heading-inline {
+  padding: 0;
+  margin: 0;
+}
+
+.phpavel-dev-calculators-edit-page__layout {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-top: 12px;
+}
+
+.phpavel-dev-calculators-edit-page__main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.phpavel-dev-calculators-edit-page__sidebar {
+  flex: 0 0 360px;
+  max-width: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.phpavel-dev-calculators-edit-page__item {
+  background-color: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 7px;
+  padding: 15px;
+  box-shadow: 0 5px 10px 2px rgba(99, 99, 99, 0.1);
+}
+
+.phpavel-dev-calculators-edit-page__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.phpavel-dev-calculators-edit-page__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.phpavel-dev-calculators-edit-page__item-header .phpavel-dev-calculators-edit-page__item-title {
+  margin-bottom: 0;
+}
+
+.phpavel-dev-calculators-edit-page__item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.phpavel-dev-calculators-edit-page__placeholder {
+  background-color: #fafafa;
+  padding: 15px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 7px;
+  opacity: 0.7;
+}
+
+.phpavel-dev-calculators-edit-page__works,
+.phpavel-dev-calculators-edit-page__additional-costs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.phpavel-dev-calculators-edit-page__works-item {
+  display: grid;
+  grid-template-columns: 1fr 180px 130px 120px auto;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 7px;
+  align-items: end;
+}
+
+.phpavel-dev-calculators-edit-page__additional-costs-item {
+  display: grid;
+  grid-template-columns: 1fr 180px auto;
+  gap: 10px;
+  padding: 15px;
+  background-color: #fafafa;
+  border-radius: 7px;
+  align-items: end;
+}
+
+.phpavel-dev-calculators-edit-page__works-item > .components-button,
+.phpavel-dev-calculators-edit-page__additional-costs-item > .components-button {
+  height: 32px;
+  align-self: end;
+  margin-bottom: 8px;
+}
+
+.phpavel-dev-calculators-edit-page__summary-total {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phpavel-dev-calculators-edit-page__summary-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--wp-admin-theme-color, #3858e9);
+}
+
+.phpavel-dev-calculators-edit-page__summary-box {
+  margin-top: 10px;
+  background: #fafafa;
+  border-radius: 7px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.phpavel-dev-calculators-edit-page__summary-box > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.phpavel-dev-calculators-edit-page__summary-box > div > span {
+  font-weight: 600;
+}
+
+.phpavel-dev-calculators-edit-page__summary-box > div.is-total {
+  padding-top: 6px;
+  border-top: 1px solid #dcdcde;
+  font-weight: 600;
+}
+
+.phpavel-dev-calculators-edit-page__summary-box.is-perks > div > span {
+  color: #1f6f1f;
+}
+
+.phpavel-dev-calculators-edit-page__summary-box.is-costs > div > span {
+  color: #9b1c1c;
+}
+
+.phpavel-dev-calculators-edit-page__profit {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 7px;
+  background: #cdffcd;
+  font-weight: 700;
+  color: #1f6f1f;
+}
+
+.phpavel-dev-calculators-edit-page__profit.is-minus {
+  background: #ffdada;
+  color: #9b1c1c;
+}
+
+.phpavel-dev-calculators-edit-page__message {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 7px;
+  font-family: "Courier New", monospace;
+  white-space: pre-line;
+  margin-bottom: 10px;
+}
+
+.phpavel-dev-calculators-edit-page .components-toggle-group-control {
+  align-self: start;
+}
+
+.phpavel-dev-calculators-edit-page .components-toggle-group-control__container {
+  min-width: 180px;
+}
+
+.phpavel-dev-calculators-base-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phpavel-dev-calculators-base-summary > span {
+  line-height: 1.2;
+}
+
+.phpavel-dev-calculators-group-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phpavel-dev-calculators-group-summary > span {
+  line-height: 1.2;
+}
+
+.phpavel-dev-calculators-note-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phpavel-dev-calculators-note-summary > span {
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phpavel-dev-calculators-edit-page .phpavel-dev-calculators-edit-page__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.phpavel-dev-calculators-edit-page .phpavel-dev-calculators-edit-page__section {
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .phpavel-dev-calculators-edit-page__layout {
+    flex-direction: column;
+  }
+  .phpavel-dev-calculators-edit-page__sidebar {
+    flex: 1 1 auto;
+    max-width: none;
+  }
+  .phpavel-dev-calculators-edit-page__works-item,
+  .phpavel-dev-calculators-edit-page__additional-costs-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

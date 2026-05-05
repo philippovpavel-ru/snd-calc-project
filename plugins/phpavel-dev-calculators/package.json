@@ -1,0 +1,13 @@
+{
+  "name": "phpavel-dev-calculators",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "wp-scripts build src/admin/index.js --output-path=build",
+    "start": "wp-scripts start src/admin/index.js --output-path=build"
+  },
+  "devDependencies": {
+    "@wordpress/dataviews": "latest",
+    "@wordpress/scripts": "latest"
+  }
+}

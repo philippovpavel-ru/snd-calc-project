@@ -1,0 +1,85 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Calculators for developers and agencies\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-05 18:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.4; wp-6.9.4; php-8.3.30\n"
+"X-Domain: phpavel-dev-calculators"
+
+#: includes/class-phpavel-dev-calculators-service.php:33
+msgid "Calculator not found for update."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:99
+msgid "Calculator not found."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-admin-page.php:38
+#: includes/class-phpavel-dev-calculators-admin-page.php:39
+#: includes/class-phpavel-dev-calculators-admin-page.php:150
+msgid "Calculators"
+msgstr ""
+
+#. Name of the plugin
+msgid "Calculators for developers and agencies"
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-admin-page.php:49
+#: includes/class-phpavel-dev-calculators-admin-page.php:50
+#: includes/class-phpavel-dev-calculators-admin-page.php:149
+msgid "Edit calculator"
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:75
+msgid "Failed to create additional cost row."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:49
+msgid "Failed to create calculator row."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:67
+msgid "Failed to create work row."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-rest-controller.php:174
+msgid "Failed to delete calculator."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:60
+msgid "Failed to reset additional costs rows."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:55
+msgid "Failed to reset works rows."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-service.php:44
+msgid "Failed to update calculator row."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://philippovpavel.ru"
+msgstr ""
+
+#. Author of the plugin
+msgid "Philippov Pavel"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugin for creating calculators for developers and agencies."
+msgstr ""
+
+#: includes/class-phpavel-dev-calculators-rest-controller.php:70
+msgid "You do not have permission to manage calculators."
+msgstr ""

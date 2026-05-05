@@ -26,6 +26,7 @@ services:
     volumes:
       - wordpress-core:/var/www/html
       - ./plugins/snd-calc-project/:/var/www/html/wp-content/plugins/snd-calc-project/
+      - ./plugins/phpavel-dev-calculators/:/var/www/html/wp-content/plugins/phpavel-dev-calculators/
       - ./mu-plugins/:/var/www/html/wp-content/mu-plugins/
       - ./.srv/custom.ini:/usr/local/etc/php/conf.d/custom.ini
     depends_on:
