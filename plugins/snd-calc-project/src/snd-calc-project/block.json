@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "snd/calc-project",
+	"version": "0.1.0",
+	"title": "Калькулятор проекта",
+	"category": "widgets",
+	"icon": "calculator",
+	"description": "Калькулятор проекта",
+	"example": {
+		"viewportWidth": 1200
+	},
+	"supports": {
+		"html": false,
+		"align": true,
+		"className": false,
+		"visibility": false,
+		"reusable": false,
+		"lock": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		},
+		"settings": {
+			"type": "object",
+			"default": {
+				"main": {
+					"tax": 6,
+					"hourlyRate": 1500,
+					"hoursPerDay": 8
+				},
+				"perks": {
+					"nda": {
+						"activate": false,
+						"value": 30
+					},
+					"marketing": {
+						"activate": false,
+						"value": 20
+					},
+					"quickly": {
+						"activate": false,
+						"value": 25
+					},
+					"distribution": true
+				},
+				"parther": {
+					"activate": false,
+					"value": 10
+				}
+			}
+		},
+		"works": {
+			"type": "array",
+			"default": []
+		},
+		"additionalCosts": {
+			"type": "array",
+			"default": []
+		},
+		"note": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"textdomain": "snd-calc-project",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

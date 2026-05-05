@@ -1,0 +1,269 @@
+.wp-block-snd-calc-project {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #fff;
+	box-sizing: border-box;
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__container {
+		padding-left: 15px;
+		padding-right: 15px;
+		max-width: 1370px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__grid {
+		display: flex;
+		gap: 15px;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+
+		&:first-child {
+			width: 100%;
+			flex: 1;
+		}
+
+		&:last-child {
+			max-width: 400px;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		background-color: #fff;
+		border: 1px solid #f2f2f2;
+		border-radius: 7px;
+		padding: 15px;
+		-webkit-box-shadow: 0px 5px 10px 2px rgba(99, 99, 99, 0.1);
+		-moz-box-shadow: 0px 5px 10px 2px rgba(99, 99, 99, 0.1);
+		box-shadow: 0px 5px 10px 2px rgba(99, 99, 99, 0.1);
+	}
+
+	&__item-title {
+		font-size: 16px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	&__message-for-client {
+		background-color: #fafafa;
+		padding: 15px;
+		font-family: "Courier New", monospace;
+		font-size: 14px;
+		white-space: pre-line;
+		margin-bottom: 10px;
+	}
+
+	&__item-button {
+		&[tone="neutral"] {
+			border: 1px solid var(--wp-components-color-foreground, #1e1e1e);
+		}
+	}
+
+	&__item-placeholder {
+		background-color: #fafafa;
+		padding: 15px;
+		font-size: 16px;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-direction: column;
+		gap: 10px;
+		min-height: 100px;
+		opacity: .7;
+		border-radius: 7px;
+	}
+
+	&__item-total {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&-price {
+			font-size: 36px;
+			font-weight: 700;
+			color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+		}
+
+		&-item {
+			font-size: 14px;
+
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__item-additionalCosts {
+		border-radius: 7px;
+		margin-top: 10px;
+		padding: 15px;
+		background-color: #fafafa;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&-item {
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+
+			span {
+				font-weight: 500;
+				color: red;
+			}
+
+			&.total {
+				padding-top: 5px;
+				font-weight: 500;
+				border-top: 1px solid #ccc;
+			}
+		}
+
+	}
+
+	&__item-perks {
+		border-radius: 7px;
+		margin-top: 10px;
+		padding: 15px;
+		background-color: #fafafa;
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		&-item {
+			display: flex;
+			justify-content: space-between;
+			font-size: 14px;
+
+			span {
+				font-weight: 500;
+				color: green;
+			}
+
+			&.total {
+				padding-top: 5px;
+				font-weight: 500;
+				border-top: 1px solid #ccc;
+			}
+		}
+
+	}
+
+	&__item-profit {
+		display: flex;
+		justify-content: space-between;
+		font-size: 14px;
+		font-weight: 700;
+		padding: 15px;
+		border-radius: 7px;
+		background-color: #cdffcd;
+		margin-top: 10px;
+
+		&-value {
+			color: green;
+
+			&.minus {
+				color: red;
+			}
+		}
+	}
+
+	&__works {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin-bottom: 10px;
+
+		&-item {
+			display: grid;
+			grid-template-columns: 1fr 180px 90px 90px 36px;
+			gap: 10px;
+			padding: 15px;
+			background-color: #fafafa;
+			border-radius: 7px;
+
+			>* {
+				flex: 1;
+				position: relative;
+
+				.components-base-control__help {
+					margin: 0;
+					bottom: -7px;
+				}
+			}
+
+			>button {
+				align-self: center;
+			}
+
+			input[disabled] {
+				pointer-events: none;
+				background: none;
+			}
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+
+				>button {
+					align-self: start;
+				}
+			}
+		}
+	}
+
+	&__additionalCosts {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		margin-bottom: 10px;
+
+		&-item {
+			display: grid;
+			grid-template-columns: 1fr 180px 36px;
+			gap: 10px;
+			padding: 15px;
+			background-color: #fafafa;
+			border-radius: 7px;
+
+			>* {
+				flex: 1;
+			}
+
+			>button {
+				align-self: center;
+			}
+
+			@media (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+
+				>button {
+					align-self: start;
+				}
+			}
+		}
+	}
+}
