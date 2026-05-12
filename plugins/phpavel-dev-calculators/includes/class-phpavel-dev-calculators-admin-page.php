@@ -24,8 +24,26 @@ class PHPavel_Dev_Calculators_Admin_Page {
 	 */
 	public static function init() {
 		add_action( 'admin_menu', array( __CLASS__, 'register_menu' ) );
+		add_action( 'admin_init', array( __CLASS__, 'prime_hidden_screen_title' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_assets' ) );
 		add_filter( 'admin_title', array( __CLASS__, 'filter_admin_title' ), 10, 2 );
+	}
+
+	/**
+	 * Set global $title before admin-header.php calls strip_tags( $title ).
+	 *
+	 * After remove_submenu_page(), this screen is not in $submenu, so get_admin_page_title() may leave $title null.
+	 *
+	 * @return void
+	 */
+	public static function prime_hidden_screen_title() {
+		$page = isset( $_GET['page'] ) ? sanitize_key( wp_unslash( $_GET['page'] ) ) : '';
+		if ( self::EDIT_SLUG !== $page ) {
+			return;
+		}
+
+		global $title;
+		$title = __( 'Edit calculator', 'phpavel-dev-calculators' );
 	}
 
 	/**
@@ -45,13 +63,22 @@ class PHPavel_Dev_Calculators_Admin_Page {
 		);
 
 		add_submenu_page(
-			null,
+			self::MENU_SLUG,
 			__( 'Edit calculator', 'phpavel-dev-calculators' ),
 			__( 'Edit calculator', 'phpavel-dev-calculators' ),
 			'edit_posts',
 			self::EDIT_SLUG,
 			array( __CLASS__, 'render_page' )
 		);
+
+		// Hide from the sidebar but keep a real parent for add_submenu_page() (null breaks plugin_basename() on PHP 8.1+).
+		remove_submenu_page( self::MENU_SLUG, self::EDIT_SLUG );
+
+		// Without a submenu row, core treats admin.php?page=… like an orphan screen: hook admin_page_{slug} and $_registered_pages must exist or user_can_access_admin_page() fails.
+		$admin_edit_hook = 'admin_page_' . self::EDIT_SLUG;
+		add_action( $admin_edit_hook, array( __CLASS__, 'render_page' ) );
+		global $_registered_pages;
+		$_registered_pages[ $admin_edit_hook ] = true;
 	}
 
 	/**
